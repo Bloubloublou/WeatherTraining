@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="Snp-yi-47V" customClass="CityTableViewCell" customModule="WeatherTraining" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="516" height="79"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Snp-yi-47V" id="jO4-Y6-lVO">
+                <rect key="frame" x="0.0" y="0.0" width="516" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="RrA-tV-RJo">
+                        <rect key="frame" x="0.0" y="0.0" width="516" height="79"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FF:FF" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm9-Zt-Ldf">
+                        <rect key="frame" x="20" y="11" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Gj-YSx">
+                        <rect key="frame" x="20" y="30.5" width="153" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FF°" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyh-ND-cAV">
+                        <rect key="frame" x="420.5" y="0.0" width="85.5" height="69.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jyh-ND-cAV" secondAttribute="trailing" constant="10" id="3e2-HF-gzj"/>
+                    <constraint firstItem="KlL-Gj-YSx" firstAttribute="leading" secondItem="jO4-Y6-lVO" secondAttribute="leadingMargin" id="6cG-Rz-j4q"/>
+                    <constraint firstItem="KlL-Gj-YSx" firstAttribute="top" secondItem="Mm9-Zt-Ldf" secondAttribute="bottom" constant="5" id="83g-kx-vRX"/>
+                    <constraint firstAttribute="trailing" secondItem="RrA-tV-RJo" secondAttribute="trailing" id="KB5-kd-Pnb"/>
+                    <constraint firstAttribute="bottom" secondItem="RrA-tV-RJo" secondAttribute="bottom" id="Xpi-P6-G3X"/>
+                    <constraint firstItem="RrA-tV-RJo" firstAttribute="top" secondItem="jO4-Y6-lVO" secondAttribute="top" id="dPM-oI-fCW"/>
+                    <constraint firstItem="Mm9-Zt-Ldf" firstAttribute="leading" secondItem="jO4-Y6-lVO" secondAttribute="leadingMargin" id="oJT-OO-erx"/>
+                    <constraint firstItem="RrA-tV-RJo" firstAttribute="leading" secondItem="jO4-Y6-lVO" secondAttribute="leading" id="oj4-tZ-84h"/>
+                    <constraint firstItem="jyh-ND-cAV" firstAttribute="top" secondItem="jO4-Y6-lVO" secondAttribute="top" id="y4k-NP-lwa"/>
+                    <constraint firstItem="Mm9-Zt-Ldf" firstAttribute="top" secondItem="jO4-Y6-lVO" secondAttribute="topMargin" id="yde-MK-KJG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellBackground" destination="RrA-tV-RJo" id="aLY-bs-geN"/>
+                <outlet property="currentTemperatureLabel" destination="jyh-ND-cAV" id="ohh-uV-RZd"/>
+                <outlet property="hourLabel" destination="Mm9-Zt-Ldf" id="Jcf-vn-oSQ"/>
+                <outlet property="nameLabel" destination="KlL-Gj-YSx" id="yry-y8-ckl"/>
+            </connections>
+            <point key="canvasLocation" x="173.91304347826087" y="123.54910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sun" width="320" height="200"/>
+    </resources>
+</document>
